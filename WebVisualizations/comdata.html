@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Design Challenge</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="backcolor">
+
+    <nav class="navbar navbar-collapse navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 30pt;">
+            <a class="navbar-brand logo-text" href="index.html">Building Data</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">     
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="comeeui.html">Commerical Electricity EUI</a>
+                        <a class="dropdown-item" href="reseeui.html">Residential Electricity EUI</a>
+                        <a class="dropdown-item" href="comfeui.html">Commerical Fuel EUI</a>
+                        <a class="dropdown-item" href="resfeui.html">Residential Fuel EUI</a>
+                        <a class="dropdown-item" href="comcompare.html">Commerical EUI Analysis</a>
+                        <a class="dropdown-item" href="rescompare.html">Residential EUI Analysis</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Comparison</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="comdata.html">Commercial Data</a>
+                </li>
+
+                <li class="nav-item">
+                        <a class="nav-link" href="resdata.html">Residential Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="padding-left: 50pt; padding-right: 50pt;">
+        <div class="row justify-content-between">
+                <div class="col-lg comp-box">
+                    <h1 class="title">Commercial Building Data</h1>
+                    <hr>
+                    The following table contains some of the data used for plotting.
+                    <br><br>
+                <!-- </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="row justify-content-center"> -->
+            <!-- <div class="col-lg comp-box"> -->
+                <table class="table table-striped table-hover table-responsive-lg">
+                        <thead><tr><th title="Field #1">City</th>
+                                <th title="Field #2">State</th>
+                                <th title="Field #3">Mean Fuel EUI</th>
+                                <th title="Field #4">Mean Electric EUI</th>
+                                <th title="Field #5">CDD</th>
+                                <th title="Field #6">HDD</th>
+                                </tr></thead>
+                                <tbody><tr>
+                                <td>Birmingham</td>
+                                <td>AL</td>
+                                <td >25.61804917</td>
+                                <td >143.3115632</td>
+                                <td >1933</td>
+                                <td >2770</td>
+                                </tr>
+                                <tr>
+                                <td>Mobile</td>
+                                <td>AL</td>
+                                <td >10.22734403</td>
+                                <td >120.4032779</td>
+                                <td >2537</td>
+                                <td >1656</td>
+                                </tr>
+                                <tr>
+                                <td>Montgomery</td>
+                                <td>AL</td>
+                                <td >24.80195354</td>
+                                <td >104.7829782</td>
+                                <td >2113</td>
+                                <td >2278</td>
+                                </tr>
+                                <tr>
+                                <td>Huntsville</td>
+                                <td>AL</td>
+                                <td >32.38238443</td>
+                                <td >140.1639354</td>
+                                <td >1540</td>
+                                <td >3517</td>
+                                </tr>
+                                <tr>
+                                <td>Tuscaloosa</td>
+                                <td>AL</td>
+                                <td >36.07410578</td>
+                                <td >160.0096274</td>
+                                <td >2348</td>
+                                <td >2338</td>
+                                </tr>
+                                <tr>
+                                <td>Anchorage</td>
+                                <td>AK</td>
+                                <td >66.88424637</td>
+                                <td >90.75517038</td>
+                                <td >3</td>
+                                <td >10201</td>
+                                </tr>
+                                <tr>
+                                <td>Juneau</td>
+                                <td>AK</td>
+                                <td ></td>
+                                <td >33.03197947</td>
+                                <td ></td>
+                                <td >9302</td>
+                                </tr>
+                                <tr>
+                                <td>Phoenix</td>
+                                <td>AZ</td>
+                                <td >4.228576054</td>
+                                <td >76.58870884</td>
+                                <td >3741</td>
+                                <td >1359</td>
+                                </tr>
+                                <tr>
+                                <td>Mesa</td>
+                                <td>AZ</td>
+                                <td >2.630877954</td>
+                                <td >123.8880368</td>
+                                <td >3592</td>
+                                <td >1462</td>
+                                </tr>
+                                <tr>
+                                <td>Tucson</td>
+                                <td>AZ</td>
+                                <td >8.777518086</td>
+                                <td >119.3705371</td>
+                                <td >1946</td>
+                                <td >2486</td>
+                                </tr>
+                                <tr>
+                                <td>Yuma</td>
+                                <td>AZ</td>
+                                <td >2.726741822</td>
+                                <td >139.6026537</td>
+                                <td >3811</td>
+                                <td >1129</td>
+                                </tr>
+                                <tr>
+                                <td>Little Rock</td>
+                                <td>AR</td>
+                                <td >26.6816408</td>
+                                <td >110.7421693</td>
+                                <td >2170</td>
+                                <td >3006</td>
+                                </tr>
+                                <tr>
+                                <td>Fayetteville</td>
+                                <td>AR</td>
+                                <td >31.32057531</td>
+                                <td >115.1743239</td>
+                                <td >1517</td>
+                                <td >4013</td>
+                                </tr>
+                                <tr>
+                                <td>Fort Smith</td>
+                                <td>AR</td>
+                                <td >37.94675451</td>
+                                <td >79.04663937</td>
+                                <td >2053</td>
+                                <td >3244</td>
+                                </tr>
+                                <tr>
+                                <td>Jonesboro</td>
+                                <td>AR</td>
+                                <td >21.6705694</td>
+                                <td >110.0972872</td>
+                                <td >1735</td>
+                                <td >3846</td>
+                                </tr>
+                                <tr>
+                                <td>Conway</td>
+                                <td>AR</td>
+                                <td >22.03765603</td>
+                                <td >94.73208535</td>
+                                <td >1843</td>
+                                <td >3472</td>
+                                </tr>
+                                <tr>
+                                <td>Los Angeles</td>
+                                <td>CA</td>
+                                <td >16.83224261</td>
+                                <td >87.06086051</td>
+                                <td >1638</td>
+                                <td >880</td>
+                                </tr>
+                                <tr>
+                                <td>San Francisco</td>
+                                <td>CA</td>
+                                <td >16.37155207</td>
+                                <td >62.00991206</td>
+                                <td >174</td>
+                                <td >2701</td>
+                                </tr>
+                                <tr>
+                                <td>San Diego</td>
+                                <td>CA</td>
+                                <td >21.45076532</td>
+                                <td >52.79177418</td>
+                                <td >1241</td>
+                                <td >1909</td>
+                                </tr>
+                                <tr>
+                                <td>San Jose</td>
+                                <td>CA</td>
+                                <td >15.9286599</td>
+                                <td >79.8249161</td>
+                                <td >395</td>
+                                <td >2735</td>
+                                </tr>
+                                <tr>
+                                <td>Denver</td>
+                                <td>CO</td>
+                                <td >39.04669974</td>
+                                <td >60.52920447</td>
+                                <td >15</td>
+                                <td >8879</td>
+                                </tr>
+                                <tr>
+                                <td>Colorado Springs</td>
+                                <td>CO</td>
+                                <td >37.60551333</td>
+                                <td >73.67177412</td>
+                                <td >6</td>
+                                <td >9474</td>
+                                </tr>
+                                <tr>
+                                <td>Fort Collins</td>
+                                <td>CO</td>
+                                <td >33.549288</td>
+                                <td >29.39100111</td>
+                                <td >250</td>
+                                <td >7381</td>
+                                </tr>
+                                <tr>
+                                <td>Pueblo</td>
+                                <td>CO</td>
+                                <td >29.8210251</td>
+                                <td >114.6138917</td>
+                                <td >1092</td>
+                                <td >5195</td>
+                                </tr>
+                                <tr>
+                                <td>New Haven</td>
+                                <td>CT</td>
+                                <td >46.60538164</td>
+                                <td >78.07118749</td>
+                                <td >745</td>
+                                <td >5650</td>
+                                </tr>
+                                <tr>
+                                <td>Bridgeport</td>
+                                <td>CT</td>
+                                <td >51.32591938</td>
+                                <td >89.63631934</td>
+                                <td >745</td>
+                                <td >5650</td>
+                                </tr>
+                                <tr>
+                                <td>Hartford</td>
+                                <td>CT</td>
+                                <td >34.53884791</td>
+                                <td >43.77108788</td>
+                                <td >603</td>
+                                <td >6318</td>
+                                </tr>
+                                <tr>
+                                <td>Stamford</td>
+                                <td>CT</td>
+                                <td >18.01204452</td>
+                                <td >74.37463446</td>
+                                <td >799</td>
+                                <td >5443</td>
+                                </tr>
+                                <tr>
+                                <td>Waterbury</td>
+                                <td>CT</td>
+                                <td >29.45467815</td>
+                                <td >115.0410609</td>
+                                <td >754</td>
+                                <td >5678</td>
+                                </tr>
+                                <tr>
+                                <td>Dover</td>
+                                <td>DE</td>
+                                <td >41.37884647</td>
+                                <td >62.7852865</td>
+                                <td >1314</td>
+                                <td >4269</td>
+                                </tr>
+                                <tr>
+                                <td>Miami</td>
+                                <td>FL</td>
+                                <td >3.659127663</td>
+                                <td >101.5965824</td>
+                                <td >4351</td>
+                                <td >124</td>
+                                </tr>
+                                <tr>
+                                <td>Tampa</td>
+                                <td>FL</td>
+                                <td >4.139954805</td>
+                                <td >91.06470901</td>
+                                <td >3228</td>
+                                <td >630</td>
+                                </tr>
+                                <tr>
+                                <td>Fort Lauderdale</td>
+                                <td>FL</td>
+                                <td >4.41940497</td>
+                                <td >107.720751</td>
+                                <td >3954</td>
+                                <td >194</td>
+                                </tr>
+                                <tr>
+                                <td>Jacksonville</td>
+                                <td>FL</td>
+                                <td >24.29323448</td>
+                                <td >122.8662051</td>
+                                <td >2803</td>
+                                <td >1215</td>
+                                </tr>
+                                <tr>
+                                <td>Orlando</td>
+                                <td>FL</td>
+                                <td >4.787737379</td>
+                                <td >95.56394254</td>
+                                <td >3424</td>
+                                <td >571</td>
+                                </tr>
+                                <tr>
+                                <td>Atlanta</td>
+                                <td>GA</td>
+                                <td >16.01071026</td>
+                                <td >57.91418111</td>
+                                <td >1336</td>
+                                <td >3644</td>
+                                </tr>
+                                <tr>
+                                <td>Columbus</td>
+                                <td>GA</td>
+                                <td >37.72857107</td>
+                                <td >92.40105193</td>
+                                <td >2141</td>
+                                <td >2354</td>
+                                </tr>
+                                <tr>
+                                <td>Columbus</td>
+                                <td>GA</td>
+                                <td >37.72857107</td>
+                                <td >92.40105193</td>
+                                <td >2141</td>
+                                <td >2354</td>
+                                </tr>
+                                <tr>
+                                <td>Columbus</td>
+                                <td>OH</td>
+                                <td >37.72857107</td>
+                                <td >92.40105193</td>
+                                <td >980</td>
+                                <td >5473</td>
+                                </tr>
+                                <tr>
+                                <td>Columbus</td>
+                                <td>OH</td>
+                                <td >37.72857107</td>
+                                <td >92.40105193</td>
+                                <td >980</td>
+                                <td >5473</td>
+                                </tr>
+                                <tr>
+                                <td>Savannah</td>
+                                <td>GA</td>
+                                <td >24.01042658</td>
+                                <td >128.5313431</td>
+                                <td >2458</td>
+                                <td >1811</td>
+                                </tr>
+                                <tr>
+                                <td>Augusta</td>
+                                <td>GA</td>
+                                <td >18.0905356</td>
+                                <td >88.71705991</td>
+                                <td >2088</td>
+                                <td >2470</td>
+                                </tr>
+                                <tr>
+                                <td>Augusta</td>
+                                <td>GA</td>
+                                <td >18.0905356</td>
+                                <td >88.71705991</td>
+                                <td >2088</td>
+                                <td >2470</td>
+                                </tr>
+                                <tr>
+                                <td>Augusta</td>
+                                <td>ME</td>
+                                <td >18.0905356</td>
+                                <td >88.71705991</td>
+                                <td >345</td>
+                                <td >7687</td>
+                                </tr>
+                                <tr>
+                                <td>Augusta</td>
+                                <td>ME</td>
+                                <td >18.0905356</td>
+                                <td >88.71705991</td>
+                                <td >345</td>
+                                <td >7687</td>
+                                </tr>
+                                <tr>
+                                <td>Macon</td>
+                                <td>GA</td>
+                                <td >6.297215322</td>
+                                <td >79.48788653</td>
+                                <td >2010</td>
+                                <td >2438</td>
+                                </tr>
+                                <tr>
+                                <td>Honolulu</td>
+                                <td>HI</td>
+                                <td >4.678787859</td>
+                                <td >88.29673203</td>
+                                <td >3954</td>
+                                <td >1</td>
+                                </tr>
+                                <tr>
+                                <td>Hilo</td>
+                                <td>HI</td>
+                                <td ></td>
+                                <td >74.73257004</td>
+                                <td >1028</td>
+                                <td >153</td>
+                                </tr>
+                                <tr>
+                                <td>Boise</td>
+                                <td>ID</td>
+                                <td >25.10609649</td>
+                                <td >91.41423743</td>
+                                <td >729</td>
+                                <td >6172</td>
+                                </tr>
+                                <tr>
+                                <td>Idaho Falls</td>
+                                <td>ID</td>
+                                <td >29.89945672</td>
+                                <td >47.5092612</td>
+                                <td >415</td>
+                                <td >7335</td>
+                                </tr>
+                                <tr>
+                                <td>Pocatello</td>
+                                <td>ID</td>
+                                <td >17.45473903</td>
+                                <td >35.92713988</td>
+                                <td >240</td>
+                                <td >7640</td>
+                                </tr>
+                                <tr>
+                                <td>Twin Falls</td>
+                                <td>ID</td>
+                                <td >20.04702605</td>
+                                <td >79.07418199</td>
+                                <td >625</td>
+                                <td >6347</td>
+                                </tr>
+                                <tr>
+                                <td>Chicago</td>
+                                <td>IL</td>
+                                <td >35.18395866</td>
+                                <td >95.52182905</td>
+                                <td >649</td>
+                                <td >6929</td>
+                                </tr>
+                                <tr>
+                                <td>Joliet</td>
+                                <td>IL</td>
+                                <td >51.09538805</td>
+                                <td >73.08287297</td>
+                                <td >833</td>
+                                <td >6236</td>
+                                </tr>
+                                <tr>
+                                <td>Aurora</td>
+                                <td>IL</td>
+                                <td >31.94744913</td>
+                                <td >66.98306594</td>
+                                <td >890</td>
+                                <td >6291</td>
+                                </tr>
+                                <tr>
+                                <td>Elgin</td>
+                                <td>IL</td>
+                                <td >53.01428914</td>
+                                <td >103.6294098</td>
+                                <td >649</td>
+                                <td >6929</td>
+                                </tr>
+                                <tr>
+                                <td>Indianapolis</td>
+                                <td>IN</td>
+                                <td >35.29071586</td>
+                                <td >102.2120592</td>
+                                <td >909</td>
+                                <td >5704</td>
+                                </tr>
+                                <tr>
+                                <td>Fort Wayne</td>
+                                <td>IN</td>
+                                <td >56.9439577</td>
+                                <td >116.5954339</td>
+                                <td >809</td>
+                                <td >6102</td>
+                                </tr>
+                                <tr>
+                                <td>South Bend</td>
+                                <td>IN</td>
+                                <td >52.46747151</td>
+                                <td >137.094637</td>
+                                <td >628</td>
+                                <td >6622</td>
+                                </tr>
+                                <tr>
+                                <td>Evansville</td>
+                                <td>IN</td>
+                                <td >47.30396747</td>
+                                <td >143.1335346</td>
+                                <td >1403</td>
+                                <td >4402</td>
+                                </tr>
+                                <tr>
+                                <td>Des Moines</td>
+                                <td>IA</td>
+                                <td >21.91963561</td>
+                                <td >41.70501412</td>
+                                <td >947</td>
+                                <td >6587</td>
+                                </tr>
+                                <tr>
+                                <td>Davenport</td>
+                                <td>IA</td>
+                                <td >39.07521989</td>
+                                <td >73.94713507</td>
+                                <td >1128</td>
+                                <td >5879</td>
+                                </tr>
+                                <tr>
+                                <td>Cedar Rapids</td>
+                                <td>IA</td>
+                                <td >39.70926209</td>
+                                <td >50.82036009</td>
+                                <td >948</td>
+                                <td >6304</td>
+                                </tr>
+                                <tr>
+                                <td>Sioux City</td>
+                                <td>IA</td>
+                                <td >34.601463</td>
+                                <td >29.27740174</td>
+                                <td >870</td>
+                                <td >6863</td>
+                                </tr>
+                                <tr>
+                                <td>Waterloo</td>
+                                <td>IA</td>
+                                <td >44.29190563</td>
+                                <td >64.98914733</td>
+                                <td >799</td>
+                                <td >7028</td>
+                                </tr>
+                                <tr>
+                                <td>Wichita</td>
+                                <td>KS</td>
+                                <td >39.06059484</td>
+                                <td >119.6165272</td>
+                                <td >1573</td>
+                                <td >4650</td>
+                                </tr>
+                                <tr>
+                                <td>Topeka</td>
+                                <td>KS</td>
+                                <td >23.85287563</td>
+                                <td >81.00286145</td>
+                                <td >1345</td>
+                                <td >5177</td>
+                                </tr>
+                                <tr>
+                                <td>Lawrence</td>
+                                <td>KS</td>
+                                <td >29.5209795</td>
+                                <td >86.01581506</td>
+                                <td >1293</td>
+                                <td >5259</td>
+                                </tr>
+                                <tr>
+                                <td>Manhattan</td>
+                                <td>KS</td>
+                                <td ></td>
+                                <td ></td>
+                                <td >1498</td>
+                                <td >5156</td>
+                                </tr>
+                                <tr>
+                                <td>Louisville</td>
+                                <td>KY</td>
+                                <td >30.59892485</td>
+                                <td >91.61611114</td>
+                                <td >1169</td>
+                                <td >4701</td>
+                                </tr>
+                                <tr>
+                                <td>Lexington</td>
+                                <td>KY</td>
+                                <td >34.33511237</td>
+                                <td >105.525194</td>
+                                <td >1065</td>
+                                <td >4702</td>
+                                </tr>
+                                <tr>
+                                <td>Bowling Green</td>
+                                <td>KY</td>
+                                <td >27.97387852</td>
+                                <td >77.38526795</td>
+                                <td >1493</td>
+                                <td >4047</td>
+                                </tr>
+                                <tr>
+                                <td>Owensboro</td>
+                                <td>KY</td>
+                                <td >23.98968557</td>
+                                <td >74.43376747</td>
+                                <td >1759</td>
+                                <td >3874</td>
+                                </tr>
+                                <tr>
+                                <td>New Orleans</td>
+                                <td>LA</td>
+                                <td >9.292414574</td>
+                                <td >107.8687617</td>
+                                <td >2655</td>
+                                <td >1437</td>
+                                </tr>
+                                <tr>
+                                <td>Baton Rouge</td>
+                                <td>LA</td>
+                                <td >10.41948961</td>
+                                <td >102.6733978</td>
+                                <td >2446</td>
+                                <td >1811</td>
+                                </tr>
+                                <tr>
+                                <td>Shreveport</td>
+                                <td>LA</td>
+                                <td >13.79684936</td>
+                                <td >103.3972391</td>
+                                <td >2453</td>
+                                <td >2348</td>
+                                </tr>
+                                <tr>
+                                <td>Lafayette</td>
+                                <td>LA</td>
+                                <td >26.58148951</td>
+                                <td >94.56318506</td>
+                                <td >2729</td>
+                                <td >1686</td>
+                                </tr>
+                                <tr>
+                                <td>Portland</td>
+                                <td>ME</td>
+                                <td >28.76826076</td>
+                                <td >62.54861416</td>
+                                <td >360</td>
+                                <td >7106</td>
+                                </tr>
+                                <tr>
+                                <td>Portland</td>
+                                <td>ME</td>
+                                <td >28.76826076</td>
+                                <td >62.54861416</td>
+                                <td >360</td>
+                                <td >7106</td>
+                                </tr>
+                                <tr>
+                                <td>Portland</td>
+                                <td>OR</td>
+                                <td >28.76826076</td>
+                                <td >62.54861416</td>
+                                <td >330</td>
+                                <td >4447</td>
+                                </tr>
+                                <tr>
+                                <td>Portland</td>
+                                <td>OR</td>
+                                <td >28.76826076</td>
+                                <td >62.54861416</td>
+                                <td >330</td>
+                                <td >4447</td>
+                                </tr>
+                                <tr>
+                                <td>Lewiston</td>
+                                <td>ME</td>
+                                <td >38.65240938</td>
+                                <td >50.31228368</td>
+                                <td >246</td>
+                                <td >7996</td>
+                                </tr>
+                                <tr>
+                                <td>Bangor</td>
+                                <td>ME</td>
+                                <td >49.17681099</td>
+                                <td >53.82963034</td>
+                                <td >428</td>
+                                <td >7305</td>
+                                </tr>
+                                <tr>
+                                <td>Baltimore</td>
+                                <td>MD</td>
+                                <td >61.53441692</td>
+                                <td >74.56631638</td>
+                                <td >1681</td>
+                                <td >3845</td>
+                                </tr>
+                                <tr>
+                                <td>Annapolis</td>
+                                <td>MD</td>
+                                <td >55.5466994</td>
+                                <td >77.13229378</td>
+                                <td >1681</td>
+                                <td >3845</td>
+                                </tr>
+                                <tr>
+                                <td>Hagerstown</td>
+                                <td>MD</td>
+                                <td >24.81548784</td>
+                                <td >88.67235646</td>
+                                <td >789</td>
+                                <td >5326</td>
+                                </tr>
+                                <tr>
+                                <td>Cumberland</td>
+                                <td>MD</td>
+                                <td >19.51005956</td>
+                                <td >47.40467681</td>
+                                <td >1175</td>
+                                <td >4853</td>
+                                </tr>
+                                <tr>
+                                <td>Boston</td>
+                                <td>MA</td>
+                                <td >47.42230486</td>
+                                <td >59.35398598</td>
+                                <td >561</td>
+                                <td >6392</td>
+                                </tr>
+                                <tr>
+                                <td>Springfield</td>
+                                <td>MA</td>
+                                <td >25.94934235</td>
+                                <td >79.40634387</td>
+                                <td >427</td>
+                                <td >6719</td>
+                                </tr>
+                                <tr>
+                                <td>Springfield</td>
+                                <td>MA</td>
+                                <td >25.94934235</td>
+                                <td >79.40634387</td>
+                                <td >427</td>
+                                <td >6719</td>
+                                </tr>
+                                <tr>
+                                <td>Springfield</td>
+                                <td>MO</td>
+                                <td >25.94934235</td>
+                                <td >79.40634387</td>
+                                <td >1389</td>
+                                <td >4578</td>
+                                </tr>
+                                <tr>
+                                <td>Springfield</td>
+                                <td>MO</td>
+                                <td >25.94934235</td>
+                                <td >79.40634387</td>
+                                <td >1389</td>
+                                <td >4578</td>
+                                </tr>
+                                <tr>
+                                <td>Worcester</td>
+                                <td>MA</td>
+                                <td >53.14608211</td>
+                                <td >44.07518476</td>
+                                <td >479</td>
+                                <td >6873</td>
+                                </tr>
+                                <tr>
+                                <td>Detroit</td>
+                                <td>MI</td>
+                                <td >39.13240578</td>
+                                <td >59.51167883</td>
+                                <td >731</td>
+                                <td >6335</td>
+                                </tr>
+                                <tr>
+                                <td>Grand Rapids</td>
+                                <td>MI</td>
+                                <td >65.54304443</td>
+                                <td >83.72820289</td>
+                                <td >698</td>
+                                <td >6485</td>
+                                </tr>
+                                <tr>
+                                <td>Flint</td>
+                                <td>MI</td>
+                                <td >67.68116486</td>
+                                <td >89.6693877</td>
+                                <td >493</td>
+                                <td >6958</td>
+                                </tr>
+                                <tr>
+                                <td>Lansing</td>
+                                <td>MI</td>
+                                <td >43.33639683</td>
+                                <td >55.48951796</td>
+                                <td >666</td>
+                                <td >6589</td>
+                                </tr>
+                                <tr>
+                                <td>Ann Arbor</td>
+                                <td>MI</td>
+                                <td >62.95367082</td>
+                                <td >93.07487014</td>
+                                <td >524</td>
+                                <td >6588</td>
+                                </tr>
+                                <tr>
+                                <td>Minneapolis</td>
+                                <td>MN</td>
+                                <td >50.73514853</td>
+                                <td >53.77095712</td>
+                                <td >605</td>
+                                <td >7912</td>
+                                </tr>
+                                <tr>
+                                <td>Rochester</td>
+                                <td>MN</td>
+                                <td >46.60486263</td>
+                                <td >55.28503445</td>
+                                <td >467</td>
+                                <td >8222</td>
+                                </tr>
+                                <tr>
+                                <td>Rochester</td>
+                                <td>MN</td>
+                                <td >46.60486263</td>
+                                <td >55.28503445</td>
+                                <td >467</td>
+                                <td >8222</td>
+                                </tr>
+                                <tr>
+                                <td>Rochester</td>
+                                <td>NY</td>
+                                <td >46.60486263</td>
+                                <td >55.28503445</td>
+                                <td >539</td>
+                                <td >6646</td>
+                                </tr>
+                                <tr>
+                                <td>Rochester</td>
+                                <td>NY</td>
+                                <td >46.60486263</td>
+                                <td >55.28503445</td>
+                                <td >539</td>
+                                <td >6646</td>
+                                </tr>
+                                <tr>
+                                <td>Jackson</td>
+                                <td>MS</td>
+                                <td >36.57278487</td>
+                                <td >86.33748284</td>
+                                <td >2258</td>
+                                <td >2392</td>
+                                </tr>
+                                <tr>
+                                <td>Gulfport</td>
+                                <td>MS</td>
+                                <td ></td>
+                                <td ></td>
+                                <td >2724</td>
+                                <td >1497</td>
+                                </tr>
+                                <tr>
+                                <td>Hattiesburg</td>
+                                <td>MS</td>
+                                <td >13.17349519</td>
+                                <td >105.3069775</td>
+                                <td >2400</td>
+                                <td >2023</td>
+                                </tr>
+                                <tr>
+                                <td>Kansas City</td>
+                                <td>MO</td>
+                                <td >20.13299765</td>
+                                <td >61.62175009</td>
+                                <td >1201</td>
+                                <td >5309</td>
+                                </tr>
+                                <tr>
+                                <td>Columbia</td>
+                                <td>MO</td>
+                                <td >30.90637551</td>
+                                <td >84.84317093</td>
+                                <td >1461</td>
+                                <td >4745</td>
+                                </tr>
+                                <tr>
+                                <td>Columbia</td>
+                                <td>MO</td>
+                                <td >30.90637551</td>
+                                <td >84.84317093</td>
+                                <td >1461</td>
+                                <td >4745</td>
+                                </tr>
+                                <tr>
+                                <td>Columbia</td>
+                                <td>SC</td>
+                                <td >30.90637551</td>
+                                <td >84.84317093</td>
+                                <td >1598</td>
+                                <td >3371</td>
+                                </tr>
+                                <tr>
+                                <td>Columbia</td>
+                                <td>SC</td>
+                                <td >30.90637551</td>
+                                <td >84.84317093</td>
+                                <td >1598</td>
+                                <td >3371</td>
+                                </tr>
+                                <tr>
+                                <td>Billings</td>
+                                <td>MT</td>
+                                <td >37.66046922</td>
+                                <td >37.39647089</td>
+                                <td >537</td>
+                                <td >6857</td>
+                                </tr>
+                                <tr>
+                                <td>Missoula</td>
+                                <td>MT</td>
+                                <td >41.10299954</td>
+                                <td >85.28608113</td>
+                                <td >302</td>
+                                <td >7349</td>
+                                </tr>
+                                <tr>
+                                <td>Great Falls</td>
+                                <td>MT</td>
+                                <td >24.80656142</td>
+                                <td >84.32727253</td>
+                                <td >366</td>
+                                <td >6980</td>
+                                </tr>
+                                <tr>
+                                <td>Bozeman</td>
+                                <td>MT</td>
+                                <td >31.1677895</td>
+                                <td >56.7838095</td>
+                                <td >254</td>
+                                <td >7701</td>
+                                </tr>
+                                <tr>
+                                <td>Helena</td>
+                                <td>MT</td>
+                                <td ></td>
+                                <td ></td>
+                                <td >102</td>
+                                <td >9043</td>
+                                </tr>
+                                <tr>
+                                <td>Omaha</td>
+                                <td>NE</td>
+                                <td >25.2481284</td>
+                                <td >70.77898264</td>
+                                <td >887</td>
+                                <td >6693</td>
+                                </tr>
+                                <tr>
+                                <td>Lincoln</td>
+                                <td>NE</td>
+                                <td >31.22091262</td>
+                                <td >93.00788392</td>
+                                <td >974</td>
+                                <td >6378</td>
+                                </tr>
+                                <tr>
+                                <td>Grand Island</td>
+                                <td>NE</td>
+                                <td >26.91708347</td>
+                                <td >62.01016975</td>
+                                <td >1035</td>
+                                <td >6198</td>
+                                </tr>
+                                <tr>
+                                <td>Kearney</td>
+                                <td>NE</td>
+                                <td ></td>
+                                <td ></td>
+                                <td >871</td>
+                                <td >6512</td>
+                                </tr>
+                                <tr>
+                                <td>Las Vegas</td>
+                                <td>NV</td>
+                                <td >19.46082274</td>
+                                <td >118.7231377</td>
+                                <td >3941</td>
+                                <td >1691</td>
+                                </tr>
+                                <tr>
+                                <td>Reno</td>
+                                <td>NV</td>
+                                <td >26.471443</td>
+                                <td >110.913175</td>
+                                <td >873</td>
+                                <td >5268</td>
+                                </tr>
+                                <tr>
+                                <td>Carson City</td>
+                                <td>NV</td>
+                                <td >23.53087112</td>
+                                <td >95.40964949</td>
+                                <td >449</td>
+                                <td >5579</td>
+                                </tr>
+                                <tr>
+                                <td>Elko</td>
+                                <td>NV</td>
+                                <td ></td>
+                                <td ></td>
+                                <td >412</td>
+                                <td >7136</td>
+                                </tr>
+                                <tr>
+                                <td>Manchester</td>
+                                <td>NH</td>
+                                <td >38.91046266</td>
+                                <td >61.19120432</td>
+                                <td >441</td>
+                                <td >6928</td>
+                                </tr>
+                                <tr>
+                                <td>Concord</td>
+                                <td>NH</td>
+                                <td >19.23106701</td>
+                                <td >74.55492636</td>
+                                <td >360</td>
+                                <td >7447</td>
+                                </tr>
+                                <tr>
+                                <td>Newark</td>
+                                <td>NJ</td>
+                                <td >36.69114798</td>
+                                <td >76.64603154</td>
+                                <td >859</td>
+                                <td >5620</td>
+                                </tr>
+                                <tr>
+                                <td>Trenton</td>
+                                <td>NJ</td>
+                                <td >33.97733606</td>
+                                <td >73.00832831</td>
+                                <td >909</td>
+                                <td >5270</td>
+                                </tr>
+                                <tr>
+                                <td>Albuquerque</td>
+                                <td>NM</td>
+                                <td >28.64097008</td>
+                                <td >74.62796112</td>
+                                <td >1035</td>
+                                <td >4428</td>
+                                </tr>
+                                <tr>
+                                <td>Las Cruces</td>
+                                <td>NM</td>
+                                <td >11.05782382</td>
+                                <td >59.354981</td>
+                                <td >1899</td>
+                                <td >2816</td>
+                                </tr>
+                                <tr>
+                                <td>Santa Fe</td>
+                                <td>NM</td>
+                                <td >43.12923993</td>
+                                <td >47.43505389</td>
+                                <td >414</td>
+                                <td >5870</td>
+                                </tr>
+                                <tr>
+                                <td>Roswell</td>
+                                <td>NM</td>
+                                <td >10.52214659</td>
+                                <td >57.61174375</td>
+                                <td >1508</td>
+                                <td >3810</td>
+                                </tr>
+                                <tr>
+                                <td>Farmington</td>
+                                <td>NM</td>
+                                <td >34.95317355</td>
+                                <td >65.67772195</td>
+                                <td >741</td>
+                                <td >5405</td>
+                                </tr>
+                                <tr>
+                                <td>New York</td>
+                                <td>NY</td>
+                                <td >25.70331627</td>
+                                <td >139.138762</td>
+                                <td >796</td>
+                                <td >5701</td>
+                                </tr>
+                                <tr>
+                                <td>Buffalo</td>
+                                <td>NY</td>
+                                <td >37.27736866</td>
+                                <td >64.11546809</td>
+                                <td >504</td>
+                                <td >6819</td>
+                                </tr>
+                                <tr>
+                                <td>Albany</td>
+                                <td>NY</td>
+                                <td >23.23099255</td>
+                                <td >51.30193062</td>
+                                <td >391</td>
+                                <td >7249</td>
+                                </tr>
+                                <tr>
+                                <td>Syracuse</td>
+                                <td>NY</td>
+                                <td >48.2127827</td>
+                                <td >57.58949096</td>
+                                <td >385</td>
+                                <td >7129</td>
+                                </tr>
+                                <tr>
+                                <td>Charlotte</td>
+                                <td>NC</td>
+                                <td >13.53318626</td>
+                                <td >59.45428507</td>
+                                <td >1700</td>
+                                <td >3383</td>
+                                </tr>
+                                <tr>
+                                <td>Raleigh</td>
+                                <td>NC</td>
+                                <td >11.75706149</td>
+                                <td >80.87048744</td>
+                                <td >1539</td>
+                                <td >3441</td>
+                                </tr>
+                                <tr>
+                                <td>Greensboro</td>
+                                <td>NC</td>
+                                <td >32.25240697</td>
+                                <td >109.4595853</td>
+                                <td >1643</td>
+                                <td >3258</td>
+                                </tr>
+                                <tr>
+                                <td>Durham</td>
+                                <td>NC</td>
+                                <td >28.50395458</td>
+                                <td >100.2095295</td>
+                                <td >1488</td>
+                                <td >3631</td>
+                                </tr>
+                                <tr>
+                                <td>Fargo</td>
+                                <td>ND</td>
+                                <td >50.00285122</td>
+                                <td >69.81735317</td>
+                                <td >533</td>
+                                <td >8824</td>
+                                </tr>
+                                <tr>
+                                <td>Bismarck</td>
+                                <td>ND</td>
+                                <td >35.22787972</td>
+                                <td >99.17960934</td>
+                                <td >423</td>
+                                <td >8650</td>
+                                </tr>
+                                <tr>
+                                <td>Grand Forks</td>
+                                <td>ND</td>
+                                <td >47.77046162</td>
+                                <td >76.23093899</td>
+                                <td >462</td>
+                                <td >9222</td>
+                                </tr>
+                                <tr>
+                                <td>Minot</td>
+                                <td>ND</td>
+                                <td >44.03506433</td>
+                                <td >96.65066237</td>
+                                <td >379</td>
+                                <td >9324</td>
+                                </tr>
+                                <tr>
+                                <td>Dickinson</td>
+                                <td>ND</td>
+                                <td >4.255631437</td>
+                                <td >56.3915725</td>
+                                <td >400</td>
+                                <td >8842</td>
+                                </tr>
+                                <tr>
+                                <td>Cleveland</td>
+                                <td>OH</td>
+                                <td >61.56162388</td>
+                                <td >71.46307526</td>
+                                <td >949</td>
+                                <td >5438</td>
+                                </tr>
+                                <tr>
+                                <td>Cincinnati</td>
+                                <td>OH</td>
+                                <td >30.32034908</td>
+                                <td >80.28212796</td>
+                                <td >1044</td>
+                                <td >5214</td>
+                                </tr>
+                                <tr>
+                                <td>Dayton</td>
+                                <td>OH</td>
+                                <td >29.83327126</td>
+                                <td >58.74761073</td>
+                                <td >1264</td>
+                                <td >5247</td>
+                                </tr>
+                                <tr>
+                                <td>Akron</td>
+                                <td>OH</td>
+                                <td >45.40190334</td>
+                                <td >88.50104924</td>
+                                <td >884</td>
+                                <td >5670</td>
+                                </tr>
+                                <tr>
+                                <td>Tulsa</td>
+                                <td>OK</td>
+                                <td >20.75653939</td>
+                                <td >97.67605025</td>
+                                <td >1823</td>
+                                <td >3774</td>
+                                </tr>
+                                <tr>
+                                <td>Oklahoma City</td>
+                                <td>OK</td>
+                                <td >22.052462</td>
+                                <td >105.7385313</td>
+                                <td >1848</td>
+                                <td >3592</td>
+                                </tr>
+                                <tr>
+                                <td>Lawton</td>
+                                <td>OK</td>
+                                <td >13.4514424</td>
+                                <td >99.20682453</td>
+                                <td >2149</td>
+                                <td >3399</td>
+                                </tr>
+                                <tr>
+                                <td>Eugene</td>
+                                <td>OR</td>
+                                <td >16.66082802</td>
+                                <td >114.1861261</td>
+                                <td >341</td>
+                                <td >4526</td>
+                                </tr>
+                                <tr>
+                                <td>Salem</td>
+                                <td>OR</td>
+                                <td >26.6779148</td>
+                                <td >69.02721459</td>
+                                <td >276</td>
+                                <td >4685</td>
+                                </tr>
+                                <tr>
+                                <td>Medford</td>
+                                <td>OR</td>
+                                <td >34.80260515</td>
+                                <td >50.3915834</td>
+                                <td >366</td>
+                                <td >5076</td>
+                                </tr>
+                                <tr>
+                                <td>Bend</td>
+                                <td>OR</td>
+                                <td >33.19081906</td>
+                                <td >55.01344125</td>
+                                <td >177</td>
+                                <td >6899</td>
+                                </tr>
+                                <tr>
+                                <td>Philadelphia</td>
+                                <td>PA</td>
+                                <td >43.37488122</td>
+                                <td >65.73733274</td>
+                                <td >1071</td>
+                                <td >4935</td>
+                                </tr>
+                                <tr>
+                                <td>Pittsburgh</td>
+                                <td>PA</td>
+                                <td >44.09354388</td>
+                                <td >73.38420393</td>
+                                <td >857</td>
+                                <td >5564</td>
+                                </tr>
+                                <tr>
+                                <td>Allentown</td>
+                                <td>PA</td>
+                                <td >17.75747353</td>
+                                <td >90.14041433</td>
+                                <td >1265</td>
+                                <td >4682</td>
+                                </tr>
+                                <tr>
+                                <td>Harrisburg</td>
+                                <td>PA</td>
+                                <td >50.85995373</td>
+                                <td >92.11591315</td>
+                                <td >805</td>
+                                <td >5421</td>
+                                </tr>
+                                <tr>
+                                <td>Lancaster</td>
+                                <td>PA</td>
+                                <td >42.36142529</td>
+                                <td >98.32453837</td>
+                                <td >934</td>
+                                <td >5321</td>
+                                </tr>
+                                <tr>
+                                <td>Providence</td>
+                                <td>RI</td>
+                                <td >32.08636042</td>
+                                <td >48.7658571</td>
+                                <td >616</td>
+                                <td >6115</td>
+                                </tr>
+                                <tr>
+                                <td>Newport</td>
+                                <td>RI</td>
+                                <td >30.53134736</td>
+                                <td >80.38871131</td>
+                                <td >600</td>
+                                <td >5732</td>
+                                </tr>
+                                <tr>
+                                <td>Charleston</td>
+                                <td>SC</td>
+                                <td >21.20947214</td>
+                                <td >119.992456</td>
+                                <td >2340</td>
+                                <td >2018</td>
+                                </tr>
+                                <tr>
+                                <td>Charleston</td>
+                                <td>SC</td>
+                                <td >21.20947214</td>
+                                <td >119.992456</td>
+                                <td >2340</td>
+                                <td >2018</td>
+                                </tr>
+                                <tr>
+                                <td>Charleston</td>
+                                <td>WV</td>
+                                <td >21.20947214</td>
+                                <td >119.992456</td>
+                                <td >924</td>
+                                <td >4955</td>
+                                </tr>
+                                <tr>
+                                <td>Charleston</td>
+                                <td>WV</td>
+                                <td >21.20947214</td>
+                                <td >119.992456</td>
+                                <td >924</td>
+                                <td >4955</td>
+                                </tr>
+                                <tr>
+                                <td>Greenville</td>
+                                <td>SC</td>
+                                <td >35.21486995</td>
+                                <td >99.07052811</td>
+                                <td >1490</td>
+                                <td >3411</td>
+                                </tr>
+                                <tr>
+                                <td>Spartanburg</td>
+                                <td>SC</td>
+                                <td >81.74243975</td>
+                                <td >174.5006129</td>
+                                <td >1401</td>
+                                <td >3712</td>
+                                </tr>
+                                <tr>
+                                <td>Rock Hill</td>
+                                <td>SC</td>
+                                <td >26.68203616</td>
+                                <td >78.09702454</td>
+                                <td >1930</td>
+                                <td >2815</td>
+                                </tr>
+                                <tr>
+                                <td>Sioux Falls</td>
+                                <td>SD</td>
+                                <td >26.23730963</td>
+                                <td >38.72779439</td>
+                                <td >579</td>
+                                <td >7884</td>
+                                </tr>
+                                <tr>
+                                <td>Rapid City</td>
+                                <td>SD</td>
+                                <td >31.29330843</td>
+                                <td >83.56480204</td>
+                                <td >295</td>
+                                <td >7551</td>
+                                </tr>
+                                <tr>
+                                <td>Aberdeen</td>
+                                <td>SD</td>
+                                <td >19.34471062</td>
+                                <td >70.27144234</td>
+                                <td >525</td>
+                                <td >8534</td>
+                                </tr>
+                                <tr>
+                                <td>Memphis</td>
+                                <td>TN</td>
+                                <td >22.10694152</td>
+                                <td >95.38076622</td>
+                                <td >2021</td>
+                                <td >3317</td>
+                                </tr>
+                                <tr>
+                                <td>Nashville</td>
+                                <td>TN</td>
+                                <td >38.6383685</td>
+                                <td >121.8261634</td>
+                                <td >1332</td>
+                                <td >4107</td>
+                                </tr>
+                                <tr>
+                                <td>Knoxville</td>
+                                <td>TN</td>
+                                <td >52.69375786</td>
+                                <td >91.18226672</td>
+                                <td >1339</td>
+                                <td >3955</td>
+                                </tr>
+                                <tr>
+                                <td>Chattanooga</td>
+                                <td>TN</td>
+                                <td >17.41534028</td>
+                                <td >92.40368921</td>
+                                <td >1433</td>
+                                <td >3560</td>
+                                </tr>
+                                <tr>
+                                <td>Houston</td>
+                                <td>TX</td>
+                                <td >12.98920092</td>
+                                <td >80.5804659</td>
+                                <td >2586</td>
+                                <td >1469</td>
+                                </tr>
+                                <tr>
+                                <td>Dallas</td>
+                                <td>TX</td>
+                                <td >7.79911658</td>
+                                <td >85.1680848</td>
+                                <td >2463</td>
+                                <td >2429</td>
+                                </tr>
+                                <tr>
+                                <td>San Antonio</td>
+                                <td>TX</td>
+                                <td >7.9709488</td>
+                                <td >105.1780002</td>
+                                <td >2364</td>
+                                <td >2049</td>
+                                </tr>
+                                <tr>
+                                <td>Austin</td>
+                                <td>TX</td>
+                                <td >8.99227297</td>
+                                <td >85.44434022</td>
+                                <td >2710</td>
+                                <td >1918</td>
+                                </tr>
+                                <tr>
+                                <td>Salt Lake City</td>
+                                <td>UT</td>
+                                <td >52.62919086</td>
+                                <td >82.40070317</td>
+                                <td >21</td>
+                                <td >9639</td>
+                                </tr>
+                                <tr>
+                                <td>Provo</td>
+                                <td>UT</td>
+                                <td ></td>
+                                <td ></td>
+                                <td >662</td>
+                                <td >5962</td>
+                                </tr>
+                                <tr>
+                                <td>Ogden</td>
+                                <td>UT</td>
+                                <td >62.42020424</td>
+                                <td >97.16772637</td>
+                                <td >1174</td>
+                                <td >5670</td>
+                                </tr>
+                                <tr>
+                                <td>Logan</td>
+                                <td>UT</td>
+                                <td >64.11370387</td>
+                                <td >73.88903332</td>
+                                <td >704</td>
+                                <td >6680</td>
+                                </tr>
+                                <tr>
+                                <td>Burlington</td>
+                                <td>VT</td>
+                                <td >19.15118099</td>
+                                <td >77.80400131</td>
+                                <td >484</td>
+                                <td >7432</td>
+                                </tr>
+                                <tr>
+                                <td>Virginia Beach</td>
+                                <td>VA</td>
+                                <td >11.41192572</td>
+                                <td >62.97189709</td>
+                                <td >1647</td>
+                                <td >3215</td>
+                                </tr>
+                                <tr>
+                                <td>Norfolk</td>
+                                <td>VA</td>
+                                <td >13.3557913</td>
+                                <td >86.46286453</td>
+                                <td >1836</td>
+                                <td >2958</td>
+                                </tr>
+                                <tr>
+                                <td>Richmond</td>
+                                <td>VA</td>
+                                <td >18.72215527</td>
+                                <td >100.2043121</td>
+                                <td >1292</td>
+                                <td >4096</td>
+                                </tr>
+                                <tr>
+                                <td>Hampton</td>
+                                <td>VA</td>
+                                <td >19.02000499</td>
+                                <td >86.78985667</td>
+                                <td >1836</td>
+                                <td >2958</td>
+                                </tr>
+                                <tr>
+                                <td>Roanoke</td>
+                                <td>VA</td>
+                                <td >30.61558702</td>
+                                <td >55.88477201</td>
+                                <td >1061</td>
+                                <td >4354</td>
+                                </tr>
+                                <tr>
+                                <td>Seattle</td>
+                                <td>WA</td>
+                                <td >26.39955839</td>
+                                <td >95.48640824</td>
+                                <td >165</td>
+                                <td >4919</td>
+                                </tr>
+                                <tr>
+                                <td>Tacoma</td>
+                                <td>WA</td>
+                                <td >21.40859922</td>
+                                <td >141.2801817</td>
+                                <td >223</td>
+                                <td >4531</td>
+                                </tr>
+                                <tr>
+                                <td>Vancouver</td>
+                                <td>WA</td>
+                                <td >21.29865431</td>
+                                <td >72.81282197</td>
+                                <td >330</td>
+                                <td >4447</td>
+                                </tr>
+                                <tr>
+                                <td>Everett</td>
+                                <td>WA</td>
+                                <td >37.77492151</td>
+                                <td >105.1763289</td>
+                                <td >111</td>
+                                <td >4937</td>
+                                </tr>
+                                <tr>
+                                <td>Spokane</td>
+                                <td>WA</td>
+                                <td >40.50853507</td>
+                                <td >94.66536315</td>
+                                <td >249</td>
+                                <td >7139</td>
+                                </tr>
+                                <tr>
+                                <td>Huntington</td>
+                                <td>WV</td>
+                                <td >41.882126</td>
+                                <td >75.17244207</td>
+                                <td >948</td>
+                                <td >5223</td>
+                                </tr>
+                                <tr>
+                                <td>Morgantown</td>
+                                <td>WV</td>
+                                <td >17.27391281</td>
+                                <td >68.4569909</td>
+                                <td >744</td>
+                                <td >5709</td>
+                                </tr>
+                                <tr>
+                                <td>Wheeling</td>
+                                <td>WV</td>
+                                <td >32.4598152</td>
+                                <td >61.07768863</td>
+                                <td >909</td>
+                                <td >5303</td>
+                                </tr>
+                                <tr>
+                                <td>Milwaukee</td>
+                                <td>WI</td>
+                                <td >50.80582748</td>
+                                <td >63.27656193</td>
+                                <td >568</td>
+                                <td >7304</td>
+                                </tr>
+                                <tr>
+                                <td>Madison</td>
+                                <td>WI</td>
+                                <td >43.36853111</td>
+                                <td >86.97262258</td>
+                                <td >597</td>
+                                <td >7283</td>
+                                </tr>
+                                <tr>
+                                <td>Green Bay</td>
+                                <td>WI</td>
+                                <td >30.73091425</td>
+                                <td >59.51795983</td>
+                                <td >358</td>
+                                <td >7885</td>
+                                </tr>
+                                <tr>
+                                <td>Cheyenne</td>
+                                <td>WY</td>
+                                <td >41.14711031</td>
+                                <td >70.35345778</td>
+                                <td >364</td>
+                                <td >7170</td>
+                                </tr>
+                                <tr>
+                                <td>Casper</td>
+                                <td>WY</td>
+                                <td >32.85418057</td>
+                                <td >81.75122561</td>
+                                <td >314</td>
+                                <td >7866</td>
+                                </tr>
+                                <tr>
+                                <td>Gillette</td>
+                                <td>WY</td>
+                                <td >35.23085954</td>
+                                <td >68.48671187</td>
+                                <td >522</td>
+                                <td >7375</td>
+                                </tr>
+                                <tr>
+                                <td>Laramie</td>
+                                <td>WY</td>
+                                <td ></td>
+                                <td ></td>
+                                <td >70</td>
+                                <td >8767</td>
+                                </tr>
+                                </tbody></table>
+                    </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
